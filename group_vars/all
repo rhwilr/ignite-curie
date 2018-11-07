@@ -4,6 +4,7 @@ user:
     group: ralph
     shell: /usr/bin/bash
     email:  ralph@huwiler.in
+    generate_ssh_key: yes
     log:
         dir: log
         rotate: 8
