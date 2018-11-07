@@ -25,6 +25,10 @@ ssh:
 
 base_packages:
     - base-devel
+    - git
+    - rsync
+    - reflector
+    - screen
 
 journal:
     max_size: 500M
