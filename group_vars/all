@@ -14,7 +14,8 @@ passwordless_sudo: []
 
 aur:
     dir: aur
-    packages: []
+    packages:
+      - downgrade
 
 ssh:
     port: 22
