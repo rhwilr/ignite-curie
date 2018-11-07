@@ -14,8 +14,7 @@ passwordless_sudo: []
 
 aur:
     dir: aur
-    packages:
-        - aura-bin
+    packages: []
 
 ssh:
     port: 22
