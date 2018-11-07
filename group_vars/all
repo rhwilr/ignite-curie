@@ -1,0 +1,27 @@
+user:
+    name: ralph
+    uid: 1000
+    group: ralph
+    shell: /usr/bin/bash
+    email:  ralph@huwiler.in
+    log:
+        dir: log
+        rotate: 8
+
+hostname: curie.rhwilr.ch
+
+aur:
+    dir: aur
+    packages:
+        - aura-bin
+
+ssh:
+    port: 22
+    user_key: /root/id_rsa
+    enable_sshd: True
+
+base_packages:
+    - base-devel
+
+journal:
+    max_size: 500M
