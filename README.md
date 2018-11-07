@@ -22,6 +22,9 @@ Run the playbook as root.
 
     $ ansible-playbook -i localhost playbook.yml
 
+
+You can also use the `install.sh` script to automate these steps.
+
 When run, Ansible will prompt for the user password. This only needs to be
 provided on the first run when the user is being created. On later runs,
 providing any password -- whether the current user password or a new one -- will
