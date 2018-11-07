@@ -1,8 +1,13 @@
 ---
 - hosts: localhost
   become: yes
+
   roles:
-    - { role: base, tags: ['base'] } 
+    - { role: base, tags: ['base'] }
+    - { role: cron, tags: ['cron'] }
+    - { role: microcode, tags: ['microcode'], when: "'GenuineIntel' in ansible_processor" }
+    - { role: ssh, tags: ['ssh'] }
+
   vars_prompt:
     - name: user_password
       prompt: "Enter desired user password"
