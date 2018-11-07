@@ -39,9 +39,8 @@
     - packages
 
 - name: Install AUR base packages
-  aur: 
-    name: "{{ aur.packages }}"
-    user: "{{ user.name }}"
+  aur: name={{ item }} user={{ user.name }}
+  with_items: "{{ aur.packages }}"
   tags:
     - aur
     - packages
