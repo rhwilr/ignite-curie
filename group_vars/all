@@ -10,6 +10,8 @@ user:
 
 hostname: curie.rhwilr.ch
 
+passwordless_sudo:
+
 aur:
     dir: aur
     packages:
