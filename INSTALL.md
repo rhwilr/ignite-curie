@@ -90,6 +90,7 @@ Change root into the base install and perform [base configuration tasks][7].
     $ ln -sf /usr/share/zoneinfo/Europe/Zurich /etc/localtime
     $ hwclock --systohc --utc
     $ echo curie.rhwilr.ch > /etc/hostname
+    $ systemctl enable dhcpcd@eno1.service
     $ passwd
 
 Install systemd-boot
