@@ -29,6 +29,7 @@ base_packages:
     - rsync
     - reflector
     - screen
+    - htop
 
 mediapool: 
     mount: /mnt/MediaPool
