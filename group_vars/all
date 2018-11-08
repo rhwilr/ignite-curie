@@ -31,9 +31,9 @@ base_packages:
     - screen
 
 media_pool: 
-    mount: /mnt/Media
+    mount: /mnt/MediaPool
     server: 192.168.1.10
-    path: /Media
+    path: /export/MediaPool
 
 
 journal:
