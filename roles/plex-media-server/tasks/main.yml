@@ -9,3 +9,4 @@
 
 - name: Enable and start Plex
   service: name=plexmediaserver.service enabled=yes state=started
+  when: plex_media_server.enable == True

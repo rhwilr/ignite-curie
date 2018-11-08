@@ -17,4 +17,7 @@
 {% if ssh.enable_sshd %}
 -A TCP -p tcp -m tcp --dport {{ ssh.port }} -j ACCEPT
 {% endif %}
+{% if plex_media_server.enable %}
+-A TCP -p tcp -m tcp --dport 32400 -j ACCEPT
+{% endif %}
 COMMIT

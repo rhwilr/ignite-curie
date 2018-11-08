@@ -37,6 +37,7 @@ mediapool:
 
 plex_media_server:
     use_plex_pass: True
+    enable: True
 
 journal:
     max_size: 500M
