@@ -8,6 +8,7 @@
     - { role: microcode, tags: ['microcode'], when: "'GenuineIntel' in ansible_processor" }
     - { role: ssh, tags: ['ssh'] }
     - { role: iptables, tags: ['iptables'] }
+    - { role: media-pool, tags: ['media-pool'] }
 
   vars_prompt:
     - name: user_password

@@ -1,0 +1,14 @@
+---
+- name: Install nfs client
+  pacman: 
+    name: nfs-utils
+    state: present
+
+- name: Mount MediaPool nfs share
+  mount:
+    name: "{{media_pool.mount}}"
+    src: "{{media_pool.server}}:{{media_pool.path}}"
+    fstype: nfs
+    state: mounted
+  tags:
+    - media-pool

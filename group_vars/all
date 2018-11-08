@@ -30,5 +30,11 @@ base_packages:
     - reflector
     - screen
 
+media_pool: 
+    mount: /mnt/Media
+    server: 192.168.1.10
+    path: /Media
+
+
 journal:
     max_size: 500M
