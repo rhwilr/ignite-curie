@@ -1,0 +1,11 @@
+---
+- name: Install plex-media-server
+  aur: name=plex-media-server user={{ user.name }} skip_pgp=yes
+  when: plex_media_server.use_plex_pass == False
+
+- name: Install plex-media-server-plexpass
+  aur: name=plex-media-server-plexpass user={{ user.name }} skip_pgp=yes
+  when: plex_media_server.use_plex_pass == True
+
+- name: Enable and start Plex
+  service: name=plexmediaserver.service enabled=yes state=started

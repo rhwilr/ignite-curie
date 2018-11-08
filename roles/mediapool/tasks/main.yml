@@ -6,8 +6,8 @@
 
 - name: Mount MediaPool nfs share
   mount:
-    name: "{{media_pool.mount}}"
-    src: "{{media_pool.server}}:{{media_pool.path}}"
+    name: "{{mediapool.mount}}"
+    src: "{{mediapool.server}}:{{mediapool.path}}"
     fstype: nfs
     state: mounted
   tags:

@@ -30,11 +30,13 @@ base_packages:
     - reflector
     - screen
 
-media_pool: 
+mediapool: 
     mount: /mnt/MediaPool
     server: 192.168.1.10
     path: /export/MediaPool
 
+plex_media_server:
+    use_plex_pass: True
 
 journal:
     max_size: 500M
