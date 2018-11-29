@@ -20,3 +20,12 @@
 
 - name: Add Packman hook to restart PMS after an update
   template: src=pms-update-post.hook.j2 dest=/etc/pacman.d/hooks/pms-update-post.hook
+
+- name: Create a cron to automatically update pms
+  cron:
+    name: PMS autoupdate
+    minute: 0
+    hour: 4
+    user: "{{ user.name }}"
+    job: "timeout -s 2 300 yay --nocleanmenu --nodiffmenu -Syy plex-media-server-plexpass"
+    cron_file: ansible_pms-autoupdate
