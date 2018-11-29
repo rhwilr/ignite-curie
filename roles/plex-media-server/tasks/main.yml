@@ -25,7 +25,7 @@
   cron:
     name: PMS autoupdate
     minute: 0
-    hour: 4
+    hour: 8
     user: "{{ user.name }}"
     job: "timeout -s 2 300 yay --nocleanmenu --nodiffmenu -Syy plex-media-server-plexpass"
     cron_file: ansible_pms-autoupdate
