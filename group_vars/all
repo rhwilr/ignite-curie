@@ -11,7 +11,8 @@ user:
 
 hostname: curie.rhwilr.ch
 
-passwordless_sudo: []
+passwordless_sudo:
+    - ALL
 
 aur:
     dir: aur
