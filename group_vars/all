@@ -37,7 +37,7 @@ mediapool:
     path: /export/MediaPool
 
 plex_media_server:
-    use_plex_pass: True
+    package: plex-media-server-plexpass
     enable: True
 
 journal:

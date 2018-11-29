@@ -1,14 +1,15 @@
 ---
 - name: Install plex-media-server
-  aur: name=plex-media-server user={{ user.name }} skip_pgp=yes
-  when: plex_media_server.use_plex_pass == False
-
-- name: Install plex-media-server-plexpass
-  aur: name=plex-media-server-plexpass user={{ user.name }} skip_pgp=yes
-  when: plex_media_server.use_plex_pass == True
+  aur: 
+    name: "{{ plex_media_server.package }}"
+    user: "{{ user.name }}"
+    skip_pgp: yes
 
 - name: Enable and start Plex
-  service: name=plexmediaserver.service enabled=yes state=started
+  service: 
+    name: plexmediaserver.service
+    enabled: yes
+    state: started
   when: plex_media_server.enable == True
 
 - name: Increase inotify limit for users
@@ -16,3 +17,6 @@
       dest: "/etc/sysctl.d/40-max-user-watches.conf"
       content: |
         fs.inotify.max_user_watches=524288
+
+- name: Add Packman hook to restart PMS after an update
+  template: src=pms-update-post.hook.j2 dest=/etc/pacman.d/hooks/pms-update-post.hook

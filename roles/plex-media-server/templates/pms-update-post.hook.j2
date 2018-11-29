@@ -1,0 +1,11 @@
+# {{ ansible_managed }}
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = {{ plex_media_server.package }}
+
+[Action]
+Description = Restart plex-media-server after an update
+When = PostTransaction
+Depends = systemctl
+Exec = /usr/bin/systemctl restart plexmediaserver.service
