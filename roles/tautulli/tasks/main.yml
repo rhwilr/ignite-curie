@@ -1,0 +1,13 @@
+---
+- name: Install tautulli
+  aur: 
+    name: "tautulli"
+    user: "{{ user.name }}"
+    skip_pgp: yes
+
+- name: Enable and start tautulli
+  service: 
+    name: tautulli.service
+    enabled: yes
+    state: started
+  when: plex_media_server.enable == True

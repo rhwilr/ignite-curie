@@ -26,5 +26,6 @@ COMMIT
 {% endif %}
 {% if plex_media_server.enable %}
 -A TCP -p tcp -m tcp --dport 32400 -j ACCEPT
+-A TCP -p tcp -m tcp --dport 8181 -j ACCEPT
 {% endif %}
 COMMIT
